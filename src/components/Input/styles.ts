@@ -5,6 +5,19 @@ interface IContainerProps {
   isFilled: boolean;
 }
 
+export const Label = styled.label`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6c6c80;
+  margin-bottom: 8px;
+
+  div + & {
+    margin-top: 24px;
+  }
+`;
+
 export const Container = styled.div<IContainerProps>`
   display: flex;
   align-items: center;
@@ -14,10 +27,6 @@ export const Container = styled.div<IContainerProps>`
   padding: 18px 24px;
   width: 100%;
   font-size: 16px;
-
-  & + div {
-    margin-top: 24px;
-  }
 
   h1 {
     margin-bottom: 40px;
